@@ -1,0 +1,130 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: linear-gradient(135deg, #1e1e1e, #2b2b2b);
+  color: #f2f2f2;
+  font-family: "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+/* 인트로 텍스트 */
+.intro-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.typing {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 28px;
+  font-weight: bold;
+  color: white;
+  border-right: 2px solid white;
+  animation: typing 1.5s steps(13, end), blink 0.7s step-end infinite;
+  width: 0;
+  max-width: 90vw;
+}
+.typing.done {
+  animation: none;
+  border-right: none;
+  width: auto;
+  overflow: visible;
+  white-space: normal;
+}
+.typing.move-up {
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  font-size: 32px;
+  transition: all 0.8s ease;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+}
+
+body.flash {
+  animation: flash 0.3s;
+}
+@keyframes flash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+.card-container {
+  position: absolute;
+  top: 120px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 40px;
+}
+.card-container.hidden {
+  display: none;
+}
+
+.card {
+  width: 250px;
+  background-color: #2a2a2a;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+.card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+.card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.1);
+}
+
+.enter-btn {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 12px 24px;
+  font-size: 16px;
+  background-color: #f2f2f2;
+  color: #121212;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  text-decoration: none;
+  z-index: 10;
+  transition: background 0.3s;
+}
+.enter-btn:hover {
+  background-color: #e0e0e0;
+}
+.hidden {
+  display: none !important;
+}

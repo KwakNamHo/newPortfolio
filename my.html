@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY 포트폴리오</title>
+    <link rel="stylesheet" href="my.css" />
+  </head>
+  <body>
+    <div class="cursor-dot" id="cursor-dot"></div>
+
+    <header class="navbar">
+      <div class="logo-box">
+        <div class="logo">MY Portfolio</div>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">INTRO</a>
+        <a href="team.html">TEAM</a>
+      </nav>
+      <button id="toggle-dark" class="dark-toggle">🌙 다크모드</button>
+    </header>
+
+    <section class="qa-section">
+      <h2>💬 짧은 인터뷰</h2>
+
+      <div class="qa-item" onclick="toggleCard(this)">
+        <div class="q">Q. 보안을 왜 좋아하나요?</div>
+        <div class="a">
+          보안은 사람과 시스템 사이의 신뢰를 만드는 일이라고 생각합니다.
+        </div>
+      </div>
+
+      <div class="qa-item" onclick="toggleCard(this)">
+        <div class="q">Q. 인상 깊었던 경험은?</div>
+        <div class="a">웹 프로그래밍 강의를 듣고 홈페이지를 만드는 현재가 제일 인상 깊습니다</div>
+      </div>
+
+      <div class="qa-item" onclick="toggleCard(this)">
+        <div class="q">Q. 관심 있는 분야는?</div>
+        <div class="a">
+          <div class="field-btns">
+            <button onclick="event.stopPropagation(); showField('forensic')">디지털 포렌식</button>
+            <button onclick="event.stopPropagation(); showField('monitoring')">보안 관제</button>
+            <button onclick="event.stopPropagation(); showField('cert')">CERT</button>
+          </div>
+          <div id="field-desc" class="field-desc"></div>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <script src="my.js"></script>
+  </body>
+</html>
