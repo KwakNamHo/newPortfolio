@@ -60,9 +60,10 @@ body {
 .qa-section {
   padding: 60px 40px;
   max-width: 800px;
-  margin: auto;
+  margin: 80px auto 0;
   background-color: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06); /* 기본 모드용 살짝 부드러운 그림자 */
 }
 
 .qa-item {
