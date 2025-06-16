@@ -4,6 +4,7 @@ body {
   font-family: "Helvetica Neue", sans-serif;
   background-color: #f8f8f8;
   color: #111;
+  transition: background-color 0.3s ease;
 }
 .dark body {
   background-color: #121212 !important;
@@ -50,6 +51,7 @@ body {
   border-radius: 8px;
   padding: 8px 12px;
   cursor: pointer;
+  transition: all 0.3s;
 }
 .dark .dark-toggle {
   background: #333;
@@ -64,6 +66,7 @@ body {
   background-color: rgba(255, 255, 255, 0.03);
   border-radius: 16px;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.06); /* 기본 모드용 살짝 부드러운 그림자 */
+  transition: background-color 0.3s ease;
 }
 
 .qa-item {
@@ -84,6 +87,7 @@ body {
   font-size: 18px;
   padding: 20px;
   background: #f9f9f9;
+  transition: background-color 0.3s ease;
 }
 .a {
   font-size: 16px;

@@ -55,12 +55,13 @@ body {
 .nav-links a {
   text-decoration: none;
   color: #111;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
 }
 .dark .nav-links a {
   color: #eee;
 }
+
 .dark .navbar {
   background-color: #1c1c1c;
   border-bottom: 1px solid #333;
