@@ -31,14 +31,26 @@ const fieldData = {
     "보안 관제는 실시간으로 시스템 로그와 트래픽을 분석해 위협을 탐지하고 대응하는 활동입니다.",
   cert: "CERT는 침해사고에 대한 분석, 대응, 예방 가이드를 제공하는 보안 전문 대응 조직입니다.",
 }
-
-function showField(key) {
-  document.getElementById("field-desc").textContent = fieldData[key]
+// 포트폴리오 버튼 클릭 시 실제 링크로 이동
+function goToPortfolio(type) {
+  const links = {
+    html1: "https://knhweb.vercel.app/", // 예시 주소
+    html2: "https://knhfrom.vercel.app/", // 예시 주소
+    midterm: "https://namho-portfolio.vercel.app/", // 예시 주소
+  }
+  const url = links[type]
+  if (url) {
+    window.open(url, "_blank") // 새 탭에서 열기
+  }
 }
 
 function showField(key) {
   document.getElementById("field-desc").textContent = fieldData[key]
 }
+
+// function showField(key) {
+//   document.getElementById("field-desc").textContent = fieldData[key]
+// }
 
 // 한 번만 뜨는 "어서오세요!" 또는 "다시 와주셔서 반가워요!" 같은 팝업
 const visited = sessionStorage.getItem("visited")
